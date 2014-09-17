@@ -1,0 +1,17 @@
+[
+{
+  "modid": "Autoutils",
+  "name": "Autoutils",
+  "description": "Utilities for mods by me.",
+  "version": "1.0.1",
+  "credits": "",
+  "logoFile": "",
+  "mcversion": "1.6.4",
+  "url": "",
+  "updateUrl": "",
+  "authors": [ "AUTOMATIC_MAIDEN" ],
+  "parent":"",
+  "screenshots": [],
+  "dependencies": []
+}
+]
