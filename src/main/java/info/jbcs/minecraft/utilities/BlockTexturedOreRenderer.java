@@ -21,9 +21,9 @@ public class BlockTexturedOreRenderer implements ISimpleBlockRenderingHandler {
 	public void renderInventoryBlock(Block blck, int meta, int modelID, RenderBlocks renderer) {
 		if (blck == null || !(blck instanceof BlockTexturedOre))
 			return;
-		
+
 		BlockTexturedOre block=(BlockTexturedOre) blck;
-		
+
 		if(block.icon!=null){
 			renderer.overrideBlockTexture=block.icon;
 			renderer.renderBlockAsItem(Block.stone,meta,1.0f);
@@ -31,7 +31,7 @@ public class BlockTexturedOreRenderer implements ISimpleBlockRenderingHandler {
 		} else if(block.base!=null){
 			renderer.renderBlockAsItem(block.base,meta,1.0f);
 		}
-		
+
 		GL11.glEnable(3042);
 		GL11.glBlendFunc(770, 771);
 		renderer.setRenderBounds(bot, bot, bot, top, top, top);
@@ -45,7 +45,7 @@ public class BlockTexturedOreRenderer implements ISimpleBlockRenderingHandler {
 		if (blck == null || !(blck instanceof BlockTexturedOre))
 			return false;
 		BlockTexturedOre block=(BlockTexturedOre) blck;
-		
+
 		if(block.currentPass==0){
 			if(block.icon!=null){
 				renderer.overrideBlockTexture=block.icon;
@@ -71,5 +71,5 @@ public class BlockTexturedOreRenderer implements ISimpleBlockRenderingHandler {
 	public int getRenderId() {
 		return id;
 	}
-	
+
 }

@@ -29,7 +29,7 @@ public class GuiExButton extends GuiElement {
 		borderRight = 2;
 		borderBottom = 3;
 		borderLeft = 2;
-		
+
 		boxDisabled = new TexturedBox(texture, 0, 46, 200, 20, 2, 2, 3, 2);
 		boxNormal = new TexturedBox(texture, 0, 66, 200, 20, 2, 2, 3, 2);
 		boxOver = new TexturedBox(texture, 0, 86, 200, 20, 2, 2, 3, 2);

@@ -33,7 +33,7 @@ public class General {
 			what.motionZ = dz / total * force;
 		}
 	}
-	
+
 	public static boolean isInRange(double distance, double x1, double y1, double z1, double x2, double y2, double z2) {
 		double x = x1 - x2;
 		double y = y1 - y2;
@@ -58,7 +58,7 @@ public class General {
 			return null;
 		if (blockId >= Block.blocksList.length)
 			return null;
-		
+
 		return Block.blocksList[blockId];
 	}
 
@@ -67,38 +67,38 @@ public class General {
 			return null;
 		if (itemId >= Item.itemsList.length)
 			return null;
-		
+
 		return Item.itemsList[itemId];
 	}
 
 	public static String getUnlocalizedName(Block block) {
 		String name=block.getUnlocalizedName();
 			if(name.startsWith("tile.")) name=name.substring(5);
-			
+
 			return name;
 	}
-	
+
 	static HashMap<String,Block> blockMapping;
 	public static Block getBlock(String s,Block fallback){
 		if(blockMapping==null){
 			blockMapping=new HashMap<String,Block>();
-			
+
 			for(Block block: Block.blocksList){
 				if(block==null) continue;
 				String name=block.getUnlocalizedName();
 				if(name.startsWith("tile.")) name=name.substring(5);
-				
+
 				blockMapping.put(name.toLowerCase(), block);
 			}
 		}
-		
+
 		Block res=blockMapping.get(s.toLowerCase());
 		if(res==null) return fallback;
 		return res;
-		
+
 	}
-	
-	
+
+
 	public static Block getBlock(String s){
 		return getBlock(s,Block.stone);
 	}
@@ -107,7 +107,7 @@ public class General {
 		String res=block.getUnlocalizedName();
 		return res.substring(5);
 	}
-	
+
 
 	public static MovingObjectPosition getMovingObjectPositionFromPlayer(World par1World, EntityPlayer par2EntityPlayer, boolean par3) {
 		float var4 = 1.0F;

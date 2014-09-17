@@ -33,10 +33,10 @@ public class Autoutils implements IPacketHandler {
 	public void preInit(FMLPreInitializationEvent event) {
 		config = new Configuration(event.getSuggestedConfigurationFile());
 		config.load();
-		
+
 		proxy.preInit();
 	}
-	
+
 	@Init
 	public void init(FMLInitializationEvent event) {
 		proxy.init();

@@ -44,7 +44,7 @@ public abstract class PacketHandler implements Comparable {
 	public void sendToPlayer(EntityPlayerMP player,PacketData data) {
 		if (FMLCommonHandler.instance().getEffectiveSide() != Side.SERVER)
 			return;
-		
+
 
 		data.packetIndex = (byte) index;
 		ByteArrayOutputStream stream = data.getData();
@@ -95,7 +95,7 @@ public abstract class PacketHandler implements Comparable {
 		if (!packet.channel.equals(channel))
 			return;
 		packet.channel=channelDummy;
-		
+
 
 		DataInputStream inputStream = new DataInputStream(new ByteArrayInputStream(packet.data));
 

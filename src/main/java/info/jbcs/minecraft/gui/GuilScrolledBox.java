@@ -10,18 +10,18 @@ public class GuilScrolledBox extends GuiElement {
 	public int offset=0;
 	int contentHeight=0;
 	int scrollingStart=-1;
-	
+
 	public GuilScrolledBox(int x, int y, int w, int h) {
 		super(x, y, w, h);
 	}
 
 	int x0,x1;
-	
+
 	protected void overlayBackground(int start, int end, int color, int a1, int a2){
         Tessellator tessellator = Tessellator.instance;
-        
+
         float f = 32.0F;
-        
+
         tessellator.startDrawingQuads();
         tessellator.setColorRGBA_I(color, a2);
         tessellator.addVertexWithUV(x0, end, 0.0D, 0.0D, end / f);
@@ -31,26 +31,26 @@ public class GuilScrolledBox extends GuiElement {
         tessellator.addVertexWithUV(x0, start, 0.0D, 0.0D, start / f);
         tessellator.draw();
     }
-	
+
 
 	@Override
 	public GuiElement addChild(GuiElement e) {
 		int childBottom=e.y+e.h-18;
 		if(childBottom>contentHeight)
 			contentHeight=childBottom;
-		
+
 		return super.addChild(e);
 	}
 
-    
+
 	@Override
 	public void render() {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         Minecraft.getMinecraft().getTextureManager().bindTexture(Gui.optionsBackground);
         x0=-gui.screenX; x1=-gui.screenX+gui.width;
-        
+
         overlayBackground(y, h, 0x202020, 0xff, 0xff);
-        
+
         GL11.glPushMatrix();
         GL11.glTranslatef(0.0f,offset,0.0f);
         super.render();
@@ -80,7 +80,7 @@ public class GuilScrolledBox extends GuiElement {
 			if(offset>contentHeight) offset=contentHeight;
 			if(offset<-contentHeight) offset=-contentHeight;
 		}
-		
+
 		ev.y-=offset;
 		super.mouseMove(ev);
 		ev.y+=offset;
@@ -89,7 +89,7 @@ public class GuilScrolledBox extends GuiElement {
 	@Override
 	public void mouseDown(InputMouseEvent ev) {
 		scrollingStart=ev.y-offset;
-		
+
 		if(ev.y>=y && ev.y<y+h){
 			ev.y-=offset;
 			super.mouseDown(ev);

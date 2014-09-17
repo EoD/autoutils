@@ -24,12 +24,12 @@ public class GeneralClient {
 	static HashMap<String,ResourceLocation> resources=new HashMap<String,ResourceLocation>();
 	public static void bind(String textureName) {
 		ResourceLocation res=resources.get(textureName);
-		
+
 		if(res==null){
 			res=new ResourceLocation(textureName);
 			resources.put(textureName,res);
 		}
-		
+
 		Minecraft.getMinecraft().getTextureManager().bindTexture(res);
 	}
 }

@@ -11,7 +11,7 @@ public class ContainerTileEntity<T extends TileEntity & IInventory> extends Cont
 	public final IInventory playerInventory;
 	public final T entity;
 	public int playerSlotsCount;
-	
+
 	public ContainerTileEntity(IInventory playerInv, T tileEntity,int startX,int startY) {
 		playerInventory = playerInv;
 		entity = tileEntity;
@@ -25,7 +25,7 @@ public class ContainerTileEntity<T extends TileEntity & IInventory> extends Cont
 		for (int l = 0; l < 9; l++) {
 			addSlotToContainer(new Slot(playerInv, l, startX + l * 18, startY + 142-84));
 		}
-		
+
 		playerSlotsCount=inventorySlots.size();
 	}
 

@@ -44,7 +44,7 @@ public class BlockTexturedOre extends Block {
 
 		return pass == 1 || pass == 0;
 	}
-	
+
 	@Override
 	public void registerIcons(IconRegister register) {
 		if(iconFile!=null)

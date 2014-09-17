@@ -43,11 +43,11 @@ public class GuiScreenPlus extends GuiContainer {
 		screenX = guiLeft;
 		screenY = guiTop;
 		root.onAdded();
-		
+
         Keyboard.enableRepeatEvents(true);
 	}
 
-	
+
 	@Override
 	public void handleInput() {
 		while (Mouse.next()) {
@@ -185,7 +185,7 @@ public class GuiScreenPlus extends GuiContainer {
 
 	public void drawTiledRect(int rx, int ry, int rw, int rh, int u, int v, int tw, int th) {
 		if(rw==0 || rh==0 || tw==0 || th==0) return;
-		
+
 		float pixel = 0.00390625f;
 		Tessellator tessellator = Tessellator.instance;
 		tessellator.startDrawingQuads();

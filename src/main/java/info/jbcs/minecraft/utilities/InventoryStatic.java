@@ -95,7 +95,7 @@ public abstract class InventoryStatic implements IInventory {
 				items[j] = null;
 			}
 		}
-		
+
 		onInventoryChanged();
 	}
 
@@ -283,14 +283,14 @@ public abstract class InventoryStatic implements IInventory {
 			items[i] = null;
 		}
 	}
-	
+
 	public void throwItems(World world, int x, int y, int z){
 		if(world.isRemote) return;
-		
+
 		for (int i = 0; i < items.length; i++) {
 			ItemStack itemstack = items[i];
 			if (itemstack == null) continue;
-			
+
 			items[i]=null;
 
 			float xx = world.rand.nextFloat() * 0.8F + 0.1F;
