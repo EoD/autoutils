@@ -2,15 +2,14 @@
 {
   "modid": "Autoutils",
   "name": "Autoutils",
-  "description": "Utilities for mods by me.",
-  "version": "1.0.1",
-  "credits": "",
-  "logoFile": "",
-  "mcversion": "1.6.4",
-  "url": "",
+  "description": "Utilities for mods by AUTOMATIC_MAIDEN.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://github.com/EoD/autoutils",
   "updateUrl": "",
   "authors": [ "AUTOMATIC_MAIDEN" ],
-  "parent":"",
+  "credits": "",
+  "logoFile": "",
   "screenshots": [],
   "dependencies": []
 }
