@@ -36,3 +36,16 @@ processResources
         exclude 'mcmod.info'
     }
 }
+
+// create dev version
+task builddev(type: Jar) {
+  from sourceSets.main.output
+  appendix = project.minecraft.version
+  classifier = 'dev'
+}
+
+// create src file
+task sourceJar(type: Jar) {
+  from sourceSets.main.allSource
+  classifier = 'src'
+}
