@@ -16,7 +16,7 @@ import cpw.mods.fml.common.network.IPacketHandler;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.Player;
 
-@Mod(modid="Autoutils", name="Autoutils", version="1.0.1")
+@Mod(modid="Autoutils", name="Autoutils", version="MOD_VERSION")
 @NetworkMod(clientSideRequired=true, serverSideRequired=true, channels={ PacketHandler.channel }, packetHandler = Autoutils.class)
 public class Autoutils implements IPacketHandler {
 	static Configuration config;
